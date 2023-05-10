@@ -1,0 +1,73 @@
+##### Write a Python function for a robot to execute the instruction given in the comment
+
+## Put the ball in the box
+items = ['ball']
+places = ['box']
+def put_ball_in_box():
+    box_pos = robot.get_object_pos('box')
+    robot.put_first_on_second('ball', box_pos)
+put_ball_in_box()
+
+## Put the cube in the drawer
+items = ['ball', 'cube']
+places = ['box', 'drawer']
+def put_cube_and_ball_in_drawer():
+    robot.open_drawer()
+    drawer_pos = robot.get_object_pos('drawer')
+    robot.put_first_on_second('cube', drawer_pos)
+    robot.put_first_on_second('ball', drawer_pos)
+    robot.close_drawer()
+put_cube_and_ball_in_drawer()
+
+## Put the cube next to the sphere
+items = ['ball', 'cube']
+places = ['box', 'drawer']
+def put_cube_next_to_ball():
+    ball_pos = robot.get_object_pos('ball')
+    target_pos = ball_pos + np.array([0., 0.1, 0.])
+    robot.put_first_on_second('cube', target_pos)
+put_cube_next_to_ball()
+
+## Put the cube in front of the sphere
+items = ['ball', 'cube']
+places = ['box', 'drawer']
+def put_cube_front_of_ball():
+    ball_pos = robot.get_object_pos('ball')
+    target_pos = ball_pos + np.array([0.15, 0., 0.])
+    robot.put_first_on_second('cube', target_pos)
+put_cube_front_of_ball()
+
+## Put the ball right of the cube
+items = ['ball', 'cube']
+places = ['box', 'drawer']
+def put_cube_and_ball_in_drawer():
+    cube_pos = robot.get_object_pos('cube')
+    target_pos = cube_pos + np.array([0.0, 0.15, 0.])
+    robot.put_first_on_second('ball', target_pos)
+put_ball_right_of_cube()
+
+## Put the first three items in the drawer
+items = ['ball', 'cube_1', 'cube_2', 'cylinder_1', 'cylinder_2']
+places = ['box', 'drawer']
+def put_first_three_items_in_drawer():
+    robot.open_drawer()
+    drawer_pos = robot.get_object_pos('drawer')
+    for i in range(3):
+      robot.put_first_on_second(item[i], drawer_pos)
+    robot.close_drawer()
+put_first_three_items_in_drawer()
+
+## Put the all cubes in the drawer
+items = ['ball', 'cube_1', 'cube_2', 'cylinder_1', 'cylinder_2']
+places = ['box', 'drawer']
+def put_all_cubes_in_drawer():
+    robot.open_drawer()
+    drawer_pos = robot.get_object_pos('drawer')
+    for item in ['cube_1', 'cube_2']:
+      robot.put_first_on_second(item, drawer_pos)
+    robot.close_drawer()
+put_all_cubes_in_drawer()
+
+## INSTRUCTION
+items = ['banana', 'pear', 'coke_can', 'meat_can', 'orange']
+places = ["coke_can", "pear", "banana", "meat_can", "orange", "bowl", "drawer", "table_1", "table_2"]
