@@ -12,3 +12,8 @@ A robotic manipulation environment that uses OpenAI's GPT models to execute inst
     python main.py
     
     # press a to give instruction
+
+## Examples
+
+![Alt Text](assets/demo1.gif)
+![Alt Text](assets/demo2.gif)
