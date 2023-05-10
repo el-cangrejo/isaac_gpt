@@ -15,5 +15,5 @@ A robotic manipulation environment that uses OpenAI's GPT models to execute inst
 
 ## Examples
 
-![Alt Text](assets/demo1.gif)
-![Alt Text](assets/demo2.gif)
+![Alt Text](assets/demo1_small.gif)
+![Alt Text](assets/demo2_small.gif)
